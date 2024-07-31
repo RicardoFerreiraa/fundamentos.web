@@ -1,0 +1,51 @@
+/*Estilos da Página index.html*/
+
+.logo-img {
+    width: 100px; 
+    height: auto; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+.banner {
+    background-color: white;
+    padding: 20px; 
+    text-align: center; 
+}
+.banner-content {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+.logo img {
+    max-width: 100%; 
+}
+ul {
+    list-style-type: none; 
+    padding: 0; 
+    text-align: center; 
+}
+ul li {
+    display: inline;
+    margin-right: 10px; 
+}
+.Center {
+    text-align: center; 
+}
+.Center{
+    text-align: center;
+}
+
+.text{
+    font-size: 30px;
+    text-align: justify;
+}
+
+/*Estlos da Pagina carpadio.html*/
+
+.Cardapio{
+    text-align: center;
+}
+
+.intro{
+    font-size: 20px;
+}
