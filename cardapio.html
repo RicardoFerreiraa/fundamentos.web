@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
+    <header class="banner">
+        <div class="banner-content">
+          <div class="logo">
+            <img src="assets/img/teste.png" title="Logotipo da pizzaria" alt="Logotipo">
+        </div>
+    </div>
+
     <ul>
         <li>
           <a href="index.html"> Home</a>
@@ -17,7 +23,7 @@
         </li>
     </ul>
     
-    <h1 class="Cardapio">Cardápio da La Belle Pizza's</h1>
+    <h1 class="text">Cardápio da La Belle Pizza's</h1>
 
     <p class="intro">
         Nosso cardápio é um verdadeiro festival de sabores. Oferecemos uma ampla 
@@ -32,7 +38,7 @@
 
     <ul>
         <li>
-            <h4>Margherita</h4>
+            <h4 class="sabores">Margherita</h4>
 
             <p><b>Ingredientes:</b> Molho de tomate, muçarela, tomates frescos, manjericão, azeite de oliva</p>
             <p><b>Descrição:</b> Uma pizza tradicional italiana com a simplicidade dos ingredientes frescos, 
@@ -40,7 +46,7 @@
         </li>
 
         <li>
-            <h4>Pepperoni</h4>
+            <h4 class="sabores">Pepperoni</h4>
 
             <p><b>Ingredientes:</b> Molho de tomate, muçarela, fatias de pepperoni, orégano</p>
             <p><b>Descrição:</b> A favorita dos fãs de carnes, com generosas fatias de pepperoni sobre
@@ -49,7 +55,7 @@
     
         <li>
     
-            <h4>Quattro Formaggi</h4> 
+            <h4 class="sabores">Quattro Formaggi</h4> 
 
             <p><b>Ingredientes:</b> Molho de tomate, muçarela, gorgonzola, parmesão, provolone</p>
             <p><b>Descrição:</b> Uma mistura rica de quatro queijos que derretem em uma deliciosa 
@@ -59,7 +65,7 @@
         <h3 class="Cardapio">Pizzas Especiais</h3>
 
         <li>
-            <h4>Pizza Trufada</h4>
+            <h4 class="sabores">Pizza Trufada</h4>
 
             <p><b>Ingredientes:</b>Molho de creme trufado, muçarela, cogumelos selvagens, presunto de parma, rúcula</p>
             <p><b>Descrição:</b> Uma pizza sofisticada com creme trufado, cogumelos selvagens e presunto de parma, 
@@ -67,7 +73,7 @@
         </li>
         
         <li>
-            <h4>Mediterrânea</h4>
+            <h4 class="sabores">Mediterrânea</h4>
 
             <p><b>Ingredientes: </b> Molho de tomate, muçarela, azeitonas negras, tomates secos, queijo feta, cebolas roxas, orégano</p>
             <p><b>Descrição:</b>Uma pizza inspirada na culinária mediterrânea com um 
@@ -75,7 +81,7 @@
         </li>
 
         <li>
-            <h4>La Belle Veggie</h4>
+            <h4 class="sabores">La Belle Veggie</h4>
 
             <p><b>Ingredientes: </b>Molho de tomate, muçarela, pimentões, cogumelos, azeitonas, cebola roxa, espinafre</p>
             <p><b>Descrição:</b>Uma opção colorida e saudável com uma variedade de vegetais frescos, ideal para vegetarianos.</p>
@@ -84,7 +90,7 @@
         <h3 class="Cardapio">Pizzas Gourmet</h3>
 
         <li>
-            <h4>Pizza de Frutos do Mar</h4>
+            <h4 class="sabores">Pizza de Frutos do Mar</h4>
 
             <p><b>Ingredientes:</b>Molho de tomate, muçarela, camarões, lulas, mexilhões, alho, salsinha</p>
             <p><b>Descrição:</b>Uma combinação de frutos do mar frescos sobre uma base de muçarela e molho de tomate, 
@@ -92,7 +98,7 @@
         </li>
 
         <li>
-            <h4>Pizza BBQ Chicken</h4>
+            <h4 class="sabores">Pizza BBQ Chicken</h4>
 
             <p><b>Ingredientes:</b>Molho barbecue, muçarela, peito de frango grelhado, cebolas caramelizadas, coentro fresco</p>
             <p><b>Descrição:</b>Uma pizza com um molho barbecue tangy, peito de frango grelhado e cebolas caramelizadas, 
@@ -100,7 +106,7 @@
         </li>
  
         <li>
-            <h4>Pizza de Trufas e Cogumelos</h4>
+            <h4 class="sabores">Pizza de Trufas e Cogumelos</h4>
 
             <p><b>Ingredientes:</b>Molho de creme trufado, muçarela, cogumelos porcini, cebola caramelizada, queijo parmesão</p>
             <p><b>Descrição:</b> Uma pizza gourmet com um molho de creme trufado, cogumelos porcini 
@@ -110,7 +116,7 @@
         <h3 class="Cardapio">Pizzas Doces</h3>
 
         <li>
-            <h4>Pizza de Nutella com Morangos</h4>
+            <h4 class="sabores">Pizza de Nutella com Morangos</h4>
 
             <p><b>Ingredientes:</b> Nutella, morangos frescos, açúcar de confeiteiro</p>
             <p><b>Descrição:</b> Uma pizza doce para a sobremesa, com uma camada generosa de Nutella e 
@@ -118,7 +124,7 @@
         </li>
 
         <li>
-            <h4>Pizza de Banana com Canela</h4>
+            <h4 class="sabores">Pizza de Banana com Canela</h4>
 
             <p><b>Ingredientes:</b>Bananas fatiadas, açúcar mascavo, canela em pó, chocolate derretido</p>
             <p><b>Descrição:</b> Uma pizza doce com bananas, açúcar mascavo e canela, 
@@ -150,19 +156,34 @@
     
     <form>
         <label for="nome">Nome</label><br>
-        <input type="text" id="nome">
-        <br>
-        <br>
+        <input type="text" id="nome" onkeyup="validarNome()">
+        <div id="txtnome"></div>
+        
         <label for="email">E-mail</label><br>
-        <input type="email" id="email">
-        <br>
-        <br>
+        <input type="email" id="email" onkeyup="validarEmail()">
+        <div id="txtemail"></div>
+        
         <label for="assunto">Pedido</label><br>
-        <textarea name="pedido" id="pedido" cols="70" rows="5"></textarea>
+        <textarea name="pedido" id="pedido" cols="70" rows="5" onkeyup="validarPedido()"></textarea>
+        <div id="txtpedido"></div>
         <br>
-        <br>
+        
         <button>Enviar</button>
-    
     </form>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.391484159002!2d-35.23150582581801!3d-9.02800609103329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70063d3adec9877%3A0xded0c16d7d2c541!2sSalinas%20Maragogi%20All%20Inclusive%20Resort!5e0!3m2!1spt-BR!2sbr!4v1722708116269!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <script src="assets/js/script.js"></script>
+
+    <hr class="footer-line">
+    <footer class="footer">
+      <div class="social-icons">
+        <ul>
+          <li><a href=""><img src="assets/img/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="assets/img/facebook.png" alt="Facebook"></a></li>
+          <li><a href="https://www.google.com.br/maps/place/Salinas+Maragogi+All+Inclusive+Resort/@-9.0280061,-35.2315058,17z/data=!3m1!4b1!4m9!3m8!1s0x70063d3adec9877:0xded0c16d7d2c541!5m2!4m1!1i2!8m2!3d-9.0280061!4d-35.2289309!16s%2Fg%2F1thx479g?entry=ttu"><img src="assets/img/google-maps.png" alt="Google Maps"></a></li>
+        </ul>
+      </div>
+
+    </footer>
 </body>
 </html>
